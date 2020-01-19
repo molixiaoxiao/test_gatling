@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>Test</groupId>
+  <artifactId>Test</artifactId>
+  <version>1.0-SNAPSHOT</version>
+
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <encoding>UTF-8</encoding>
+
+    <gatling.version>3.3.1</gatling.version>
+    <gatling-maven-plugin.version>3.0.5</gatling-maven-plugin.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>io.gatling.highcharts</groupId>
+      <artifactId>gatling-charts-highcharts</artifactId>
+      <version>${gatling.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>io.gatling</groupId>
+      <artifactId>gatling-app</artifactId>
+      <version>${gatling.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>io.gatling</groupId>
+      <artifactId>gatling-recorder</artifactId>
+      <version>${gatling.version}</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>io.gatling</groupId>
+        <artifactId>gatling-maven-plugin</artifactId>
+        <version>${gatling-maven-plugin.version}</version>
+        <!-- 添加以下内容可以修改生成的报告存储位置 -->
+        <!--<configuration>-->
+          <!--<resultsFolder>${project.basedir}/target/gatling/results</resultsFolder>-->
+          <!--&lt;!&ndash; 设置为 false 输出本地报告 &ndash;&gt;-->
+          <!--<noReports>false</noReports>-->
+
+          <!--<jvmArgs>-->
+            <!--<jvmArg>-Xmx8g</jvmArg>-->
+            <!--<jvmArg>-Xms8g</jvmArg>-->
+            <!--<jvmArg>-Xss256M</jvmArg>-->
+          <!--</jvmArgs>-->
+        <!--</configuration>-->
+      </plugin>
+    </plugins>
+  </build>
+</project>

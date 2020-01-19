@@ -1,0 +1,10 @@
+{
+  "simulation": "test.scala.BaiduSimulation",
+  "simulationId": "baidusimulation",
+  "start": 1579402793286,
+  "description": "",
+  "scenarios": ["Baidu"],
+  "assertions": [
+
+  ]
+}
